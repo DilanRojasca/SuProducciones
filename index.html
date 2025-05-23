@@ -25,6 +25,25 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+      <style type="text/css">
+        .imagen-enlace-efecto {
+          display: inline-block;
+          text-decoration: none;
+          border-radius: 8px;
+          overflow: hidden;
+        }
+
+        .imagen-enlace-efecto img {
+          display: block;
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+          border-radius: 8px; /* Si quieres bordes redondeados en la imagen */
+        }
+
+        .imagen-enlace-efecto:hover img {
+          transform: scale(1.05);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+        }
+    </style>
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -54,7 +73,6 @@
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -77,9 +95,6 @@
         <h2 data-aos="fade-up" data-aos-delay="100">Su Producciones</h2>
         <p data-aos="fade-up" data-aos-delay="200">S.U Producciones crea emociones con contenido audiovisual.</p>
         <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
-          <a href="https://youtu.be/LH8-qCB_Yjc" class="glightbox btn-watch-video d-flex align-items-center"><i
-              class="bi bi-play-circle"></i><span>Mirar
-              Video</span></a>
         </div>
       </div>
 
@@ -317,10 +332,9 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
               <div class="text-center mt-4">
-                <a
-                  href="https://www.instagram.com/_sara__uribe_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-                  <img src="assets/img/WhatsApp Image 2025-04-03 at 11.40.44 AM.jpeg" class="img-fluid" ;">
-                </a>
+              <a href="blog.html" class="imagen-enlace-efecto">
+                  <img src="assets/img/WhatsApp Image 2025-04-03 at 11.40.44 AM.jpeg" class="img-fluid" alt="Ir al blog">
+              </a>  
               </div>
               <div class="member-info">
                 <h4>SARA URIBE</h4>
@@ -349,7 +363,7 @@
             </p>
             <div class="text-center mt-4">
               <a
-                href="https://www.instagram.com/_sara__uribe_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                href="https://www.instagram.com/_sara__uribe_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="imagen-enlace-efecto">
                 <img src="assets/img/qr.png" class="img-fluid" style="max-width: 300px;">
               </a>
             </div>
@@ -492,14 +506,6 @@
       <div class="container copyright text-center mt-4">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">SU PRODUCCIONES</strong> <span>All Rights
             Reserved</span></p>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
-            href=“https://themewagon.com>ThemeWagon
-        </div>
 
       </div>
 
