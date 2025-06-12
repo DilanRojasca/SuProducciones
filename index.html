@@ -86,21 +86,54 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+<!-- SECCIÓN HERO -->
+<section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/fondo.jpeg" alt="" data-aos="fade-in">
+  <img src="assets/img/fondo.jpeg" alt="" data-aos="fade-in" class="img-fluid">
 
-      <div class="container d-flex flex-column align-items-center">
-        <h2 data-aos="fade-up" data-aos-delay="100">Su Producciones</h2>
-        <p data-aos="fade-up" data-aos-delay="200">S.U Producciones crea emociones con contenido audiovisual.</p>
-        <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+  <div class="container d-flex flex-column align-items-center text-center">
+    <h2 data-aos="fade-up" data-aos-delay="100">Su Producciones</h2>
+    <p data-aos="fade-up" data-aos-delay="200">Otra forma de ver la vida.</p>
+    <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+      <a href="#" class="btn-watch-video d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#videoModal">
+        <i class="bi bi-play-circle me-2"></i><span>Ver Video</span>
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<!-- MODAL PARA VER VIDEO -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="videoModalLabel">Otra forma de ver la vida</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div class="ratio ratio-16x9">
+          <iframe id="youtubeVideo" src="https://www.youtube.com/embed/Qhz-eagMJHw" title="YouTube video player"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
+<!-- SCRIPT PARA DETENER EL VIDEO AL CERRAR EL MODAL -->
+<script>
+  const videoModal = document.getElementById('videoModal');
+  const videoIframe = document.getElementById('youtubeVideo');
 
-
-    </section><!-- /About Section -->
+  videoModal.addEventListener('hidden.bs.modal', () => {
+    // Al cerrar el modal, reseteamos el src para que el video se detenga
+    const src = videoIframe.src;
+    videoIframe.src = "";
+    videoIframe.src = src;
+  });
+</script>
     <!-- About Section -->
     <section id="about" class="about section">
 
